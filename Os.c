@@ -24,11 +24,20 @@ int main()
 	{
 		printf("\n\nPROCESS P%d\n",i);
 		obj[i].pno=i;
-		printf("Arrival Time-");
+		X:printf("Arrival Time-");
 		scanf("%d",&obj[i].process_arrival);
-		printf("Burst Time-");
+		if(obj[i].process_arrival<0)
+     		{
+       		     printf("\noops! arrival time can't be 0\n");
+         	     goto X;
+        	}
+		Y:printf("Burst Time-");
 		scanf("%d",&obj[i].process_burst);
-
+		if(obj[i].process_burst<=0)
+        	{
+            	     printf("\noops! burst time can't be 0\n");
+                     goto Y;
+		}
 	}
 	time!=0;
 	for(i=1;i<=n;i++)
