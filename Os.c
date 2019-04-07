@@ -100,12 +100,13 @@ int main()
         }
 
         }
-            printf("\n\n\nPROCESS     WAITING TIME      TURNAROUND TIME");
+       // RESULT OF ALL PROCESSES	
+        printf("\n\n\nPROCESS     WAITING TIME      TURNAROUND TIME");
         for(i=1;i<=end;i++)
         {
             printf("\nP%d            %d                   %d",res[i].final_pno,res[i].waiting_time,res[i].turnaround_time);
 
         }
-	 printf("\n\nTotal time taken to compute all the process is -   %d",time);
+	 printf("\n\nTotal time taken to compute all the process is -   %d",time);    
     return 0;
 }
