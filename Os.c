@@ -16,7 +16,7 @@ int main()
 {
 	struct process obj[30];
 	struct result res[30];
-	int i,n,j,pos,min,pro_exec,time=0,end,k,flag,ideal_time;
+	int i,n,j,pos,min,pro_exec,time=0,end,k,flag,ideal_time,sumwait=0,sumturn=0;
 	printf("Enter the no. of processes-");
 	scanf("%d",&n);
 
@@ -114,8 +114,10 @@ int main()
         for(i=1;i<=end;i++)
         {
             printf("\nP%d            %d                   %d",res[i].final_pno,res[i].waiting_time,res[i].turnaround_time);
-
+		sumwait=sumwait+res[i].waiting_time;
+		sumturn=sumturn+res[i].turnaround_time;
         }
-	 printf("\n\nTotal time taken to compute all the process is -   %d",time);    
+	 printf("\n\nTotal time taken to compute all the process is -   %d",time); 
+	 printf("Average waiting time = %d\nAverage turnaround time = %d",sumwait/end,sumturn/end);
     return 0;
 }
