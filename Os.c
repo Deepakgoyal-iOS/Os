@@ -118,6 +118,6 @@ int main()
 		sumturn=sumturn+res[i].turnaround_time;
         }
 	 printf("\n\nTotal time taken to compute all the process is -   %d",time); 
-	 printf("Average waiting time = %d\nAverage turnaround time = %d",sumwait/end,sumturn/end);
+	 printf("\nAverage waiting time = %d\nAverage turnaround time = %d",sumwait/end,sumturn/end);
     return 0;
 }
